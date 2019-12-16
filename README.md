@@ -247,3 +247,12 @@ react-native run-android
 ```
 
 Documentação: https://reactnavigation.org/docs/en/getting-started.html
+
+
+### 11º Passo: Instalar React Native Linear Gradiente.
+
+Componente para aplicar gradiente em React Native.
+
+```
+yarn add react-native-linear-gradient
+```
