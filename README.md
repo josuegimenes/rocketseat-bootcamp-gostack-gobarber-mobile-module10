@@ -256,3 +256,9 @@ Componente para aplicar gradiente em React Native.
 ```
 yarn add react-native-linear-gradient
 ```
+
+### 12º Passo: Instalar Styled Components.
+
+```
+yarn add styled-components
+```
