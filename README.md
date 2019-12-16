@@ -224,4 +224,26 @@ Instalando dependências:
 yarn add react-native-reanimated react-native-gesture-handler react-native-screens@^1.0.0-alpha.23
 ```
 
+Para finalizar a instalação do `react-native-screens` para Android, adicione as duas linhas a seguir na seção dependências em `android/app/build.gradle`:
+
+```js
+implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
+```
+
+Para finalizar a instalação do `react-native-gesture-handler` para Android, faça as seguintes modificações no `MainActivity.java`:
+
+**import com.facebook.react.ReactActivity;**
+```js
+import com.facebook.react.ReactActivityDelegate;
+import com.facebook.react.ReactRootView;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+```
+
+Depois execute no terminal:
+
+```
+react-native run-android
+```
+
 Documentação: https://reactnavigation.org/docs/en/getting-started.html
