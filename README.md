@@ -178,3 +178,35 @@ Usado para simplificar os caminhos das importações dos arquivos no app.
 ```
 yarn add babel-plugin-root-import eslint-import-resolver-babel-plugin-root-import -D
 ```
+
+Inserir essas configurações após as rules do `.eslintrc.js`:
+
+```js
+settings: {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        rootPathSuffix: "src"
+      },
+    },
+  },
+```
+
+Para o vscode encontrar o arquivo, crie o arquivo `jsconfig.json` na raiz do projeto:
+
+```js
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "~/*": ["*"],
+    }
+  }
+}
+```
+
+Para usar esse recurso, a importação é aplicada assim:
+
+```js
+import AuthLayout from '~/pages/_layouts/auth';
+```
+

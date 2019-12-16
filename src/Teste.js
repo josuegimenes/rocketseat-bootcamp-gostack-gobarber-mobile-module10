@@ -1,10 +1,8 @@
 import React from 'react';
-import {View} from 'react-native';
-
-import Teste from '~/Teste';
+import {Text} from 'react-native';
 
 // import { Container } from './styles';
 
 export default function src() {
-  return <Teste />;
+  return <Text>Teste</Text>;
 }
