@@ -91,7 +91,7 @@ yarn add eslint –init
 	JavaScript modules (import/export)
 	React
 	Does your project use TypeScript? (y/N) N
-		( ) Browser ou ( ) Node – Desmarque ambos (utilize o espaço do teclado)
+	( ) Browser ou ( ) Node – Desmarque ambos (utilize o espaço do teclado)
 	Use a popular style guide
 	Airbnb (https://github.com/airbnb/javascript)
 	JavaScript
@@ -169,4 +169,12 @@ module.exports = {
 
 // eslint-disable-line :: para desabilitar o eslint em uma linha
 // eslint-disable-next-line prefer-object-spread // desabilitar linha seguinte
+```
+
+### 9º Passo: Instalar Root Import em ambiente dev.
+
+Usado para simplificar os caminhos das importações dos arquivos no app.
+
+```
+yarn add babel-plugin-root-import eslint-import-resolver-babel-plugin-root-import -D
 ```
