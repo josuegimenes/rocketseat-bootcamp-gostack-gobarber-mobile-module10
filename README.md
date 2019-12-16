@@ -210,3 +210,10 @@ Para usar esse recurso, a importação é aplicada assim:
 import AuthLayout from '~/pages/_layouts/auth';
 ```
 
+### 10º Passo: Instalar React Navigation.
+
+Biblioteca para roteamento e navegação para aplicativos React Native.
+
+```
+yarn add react-navigation
+```
