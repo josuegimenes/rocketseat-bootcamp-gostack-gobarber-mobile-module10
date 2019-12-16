@@ -39,3 +39,134 @@ ou
 ```
 yarn create-app my-app
 ```
+
+### 3º Passo: Criar Bundle do Projeto no emulador.
+
+Foi usado emulador nativo do Android Studio. Abra o emulador nativo desejado e execute o comando para a criação e instalação do app no emulador.
+
+Use esse comando na raiz do projeto para a construção do bundle no emulador. Execute esse comando no início do projeto ou todas as vezes que tiver feito uma grande atualização no app e queira gerar o bundle novamente do zero.
+
+```
+react-native run-android
+```
+
+Caso contrário, uma vez criado o bundle e quiser apenas executá-lo no emulador, execute esse comando para iniciá-lo.
+
+```
+react-native start
+```
+
+### 4º Passo: Configurar EditorConfig
+
+Crie o arquivo **.editorconfig** pelo menu de contexto do vscode.
+
+```js
+root = true
+
+[*]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+```
+
+### 5º Passo: Instalar e Configurar Eslint em ambiente de dev.
+
+Usado para informar erros no código
+
+```
+yarn add eslint -D
+```
+
+#### Iniciar Configurações:
+
+```
+yarn add eslint –init
+```
+
+```
+	To check syntax, find problems, and enforce code style
+	JavaScript modules (import/export)
+	React
+	Does your project use TypeScript? (y/N) N
+		( ) Browser ou ( ) Node – Desmarque ambos (utilize o espaço do teclado)
+	Use a popular style guide
+	Airbnb (https://github.com/airbnb/javascript)
+	JavaScript
+	Would you like to install them now with npm? (Y/n) Y
+```
+
+#### Configurações Finais:
+
+Excluir arquivo **package-lock.json**.
+
+### 6º Passo: Executar yarn.
+
+O Eslint foi instalado com `npm`, então, rode `yarn` na raiz do projeto para resolver e atualizar as dependências.
+
+```
+yarn
+```
+
+### 7º Passo: Instalar e Configurar Eslint/Prettier em Ambiente Dev.
+
+Prettier é usado para formatar e deixar visualmente melhor o código. E todas as bibliotecas abaixo são para que todos se comuniquem e sejam relacionados, até mesmo o babel-eslint que integra a versão mais atualizada do JavaScript.
+
+```
+yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
+```
+
+### 8º Passo: Configuração Eslint.
+
+Usar a mesma configuração do App Web.
+
+```js
+module.exports = {
+  env: {
+    es6: true,
+    jest: true,
+    browser: true
+  },
+  extends: ["airbnb", "prettier", "prettier/react"],
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+    __DEV__: true
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
+    ecmaVersion: 2018,
+    sourceType: "module"
+  },
+  plugins: ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
+  rules: {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
+    "import/prefer-default-export": "off",
+    "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "react/jsx-one-expression-per-line": "off",
+    "global-require": "off",
+    "react-native/no-raw-text": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    camelcase: "off",
+    "no-console": ["error", { allow: ["tron"] }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  settings: {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        rootPathSuffix: "src"
+      },
+    },
+  },
+};
+
+// eslint-disable-line :: para desabilitar o eslint em uma linha
+// eslint-disable-next-line prefer-object-spread // desabilitar linha seguinte
+```
