@@ -1,10 +1,10 @@
 import React from 'react';
 import {View} from 'react-native';
 
-import Teste from '~/Teste';
+import Teste from '../src/Teste';
 
 // import { Container } from './styles';
 
-export default function src() {
+export default function App() {
   return <Teste />;
 }
