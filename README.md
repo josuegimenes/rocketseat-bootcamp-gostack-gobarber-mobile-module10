@@ -217,3 +217,11 @@ Biblioteca para roteamento e navegação para aplicativos React Native.
 ```
 yarn add react-navigation
 ```
+
+Instalando dependências:
+
+```
+yarn add react-native-reanimated react-native-gesture-handler react-native-screens@^1.0.0-alpha.23
+```
+
+Documentação: https://reactnavigation.org/docs/en/getting-started.html
