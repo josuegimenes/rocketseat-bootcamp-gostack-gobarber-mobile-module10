@@ -257,6 +257,42 @@ Componente para aplicar gradiente em React Native.
 yarn add react-native-linear-gradient
 ```
 
+**Configurações manuais:**
+
+`android/app/build.gradle:`
+
+```js
+implementation project(':react-native-linear-gradient')
+```
+implementation fileTree(dir: "libs", include: ["*.jar"])
+implementation "com.facebook.react:react-native:+"  // From node_modules
+
+
+`android/app/src/main/java/com/gobarbermobile/MainApplication.java:`
+
+import com.facebook.react.ReactApplication;
+```js
+import com.BV.LinearGradient.LinearGradientPackage;
+```
+import com.facebook.react.ReactNativeHost;
+
+`android/settings.gradle:`
+
+rootProject.name = 'modulo10'
+```js
+include ':react-native-linear-gradient'
+project(':react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')
+```
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+`ios/Podfile:`
+
+pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+```js
+pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+```
+
 ### 12º Passo: Instalar Styled Components.
 
 ```
