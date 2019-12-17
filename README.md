@@ -304,3 +304,9 @@ yarn add styled-components
 ```
 yarn add prop-types
 ```
+
+### 14º Passo: Instalar React Native Vector Icons.
+
+```
+yarn add react-native-vector-icons
+```
