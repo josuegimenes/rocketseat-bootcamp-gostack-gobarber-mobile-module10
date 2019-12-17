@@ -20,7 +20,7 @@ Frontend Client GoBarber - Sistema de barbearia para agendamento de serviços.
 
 ### 1º Passo: Instalação Global – Instale apenas uma vez no pc.
 
-Esse pacote instala as estruturas básicas e iniciais para React Native. 
+Esse pacote instala as estruturas básicas e iniciais para React Native.
 
 Nesse pacote não será instalado expo devido suas limitações - O Expo é uma ferramenta utilizada no desenvolvimento mobile com React Native que permite o fácil acesso às API’s nativas do dispositivo sem precisar instalar qualquer dependência ou alterar código nativo.
 
@@ -297,4 +297,10 @@ pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
 ```
 yarn add styled-components
+```
+
+### 13º Passo: Instalar PropTypes.
+
+```
+yarn add prop-types
 ```
