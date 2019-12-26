@@ -310,3 +310,9 @@ yarn add prop-types
 ```
 yarn add react-native-vector-icons
 ```
+
+### 15º Passo: Instalar Reactotron.
+
+```
+yarn add reactotron-react-native reactotron-redux reactotron-redux-saga
+```
