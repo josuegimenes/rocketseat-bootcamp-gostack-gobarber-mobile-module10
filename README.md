@@ -316,3 +316,9 @@ yarn add react-native-vector-icons
 ```
 yarn add reactotron-react-native reactotron-redux reactotron-redux-saga redux redux-saga react-redux
 ```
+
+### 16º Passo: Instalar Redux Perist e Immer.
+
+```
+yarn add redux-persist immer
+```
