@@ -322,3 +322,9 @@ yarn add reactotron-react-native reactotron-redux reactotron-redux-saga redux re
 ```
 yarn add redux-persist immer
 ```
+
+### 17º Passo: Instalar a lib Async Storage.
+
+```
+yarn add @react-native-community/async-storage
+```
