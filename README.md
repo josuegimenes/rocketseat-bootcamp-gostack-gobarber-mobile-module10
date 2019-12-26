@@ -328,3 +328,9 @@ yarn add redux-persist immer
 ```
 yarn add @react-native-community/async-storage
 ```
+
+### 18º Passo: Instalar Axios.
+
+```
+yarn add axios
+```
