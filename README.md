@@ -311,8 +311,8 @@ yarn add prop-types
 yarn add react-native-vector-icons
 ```
 
-### 15º Passo: Instalar Reactotron.
+### 15º Passo: Instalar Bibliotecas para usar Reactotron.
 
 ```
-yarn add reactotron-react-native reactotron-redux reactotron-redux-saga
+yarn add reactotron-react-native reactotron-redux reactotron-redux-saga redux redux-saga react-redux
 ```
