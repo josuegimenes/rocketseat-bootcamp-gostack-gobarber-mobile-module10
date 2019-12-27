@@ -26,6 +26,9 @@ export function* signIn({ payload }) {
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
+    // Simula um delay de 3 segundos no app para visualizar o loading.
+    // yield delay(3000);
+
     yield put(signInSuccess(token, user));
 
     // history.push('/dashboard');
@@ -47,7 +50,6 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
 
     // history.push('/');
