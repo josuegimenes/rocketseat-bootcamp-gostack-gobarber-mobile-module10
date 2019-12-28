@@ -334,3 +334,9 @@ yarn add @react-native-community/async-storage
 ```
 yarn add axios
 ```
+
+### 19º Passo: Instalar React Navigation Tabs.
+
+```
+yarn add react-navigation-tabs
+```
