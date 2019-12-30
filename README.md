@@ -344,5 +344,5 @@ yarn add react-navigation-tabs
 ### 20º Passo: Instalar Date FNS.
 
 ```
-yarn add date-fns
+yarn add date-fns@next
 ```
