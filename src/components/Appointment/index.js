@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
-import { parseISO, formatRelative } from 'date-fns';
-import pt from 'date-fns/locale/pt';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import PropTypes from 'prop-types';
+import { parseISO, formatRelative } from 'date-fns';
+import pt from 'date-fns/locale/pt';
 
 import { Container, Left, Avatar, Info, Name, Time } from './styles';
 
@@ -30,7 +31,6 @@ export default function Appointment({ data, onCancel }) {
           <Time>{dateParsed}</Time>
         </Info>
       </Left>
-
       {data.cancelable && !data.canceled_at && (
         <TouchableOpacity onPress={onCancel}>
           <Icon name="event-busy" size={20} color="#f64c75" />
@@ -39,3 +39,13 @@ export default function Appointment({ data, onCancel }) {
     </Container>
   );
 }
+
+Appointment.propTypes = {
+  data: PropTypes.shape({
+    provider: PropTypes.shape({
+      avatar: PropTypes.shape({
+        url: PropTypes.string,
+      }),
+    }),
+  }).isRequired,
+};
