@@ -346,3 +346,9 @@ yarn add react-navigation-tabs
 ```
 yarn add date-fns@next
 ```
+
+### 21º Passo: Instalar React Navigation Stack.
+
+```
+yarn add react-navigation-stack
+```
