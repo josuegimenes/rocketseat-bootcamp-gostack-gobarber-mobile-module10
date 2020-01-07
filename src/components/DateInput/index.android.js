@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
-import { DatePickerAndroid } from 'react-native';
+// import { DatePickerAndroid } from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import { format } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 
@@ -14,12 +15,12 @@ export default function DateInput({ date, onChange }) {
   );
 
   async function handleOpenPicker() {
-    const { action, year, month, day } = await DatePickerAndroid.open({
+    const { action, year, month, day } = await DateTimePicker.open({
       mode: 'spinner',
       date,
     });
 
-    if (action === DatePickerAndroid.dateSetAction) {
+    if (action === DateTimePicker.dateSetAction) {
       const selectedDate = new Date(year, month, day);
 
       onChange(selectedDate);
