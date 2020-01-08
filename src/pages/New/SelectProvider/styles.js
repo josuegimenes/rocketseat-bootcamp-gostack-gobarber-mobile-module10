@@ -18,7 +18,6 @@ export const Provider = styled(RectButton)`
   border-radius: 4px;
   padding: 20px;
   flex: 1;
-
   align-items: center;
   margin: 0 10px 20px;
 `;
@@ -31,8 +30,8 @@ export const Avatar = styled.Image`
 
 export const Name = styled.Text`
   margin-top: 15px;
-  font-size: 14px;
   font-weight: bold;
+  font-size: 14px;
   color: #333;
   text-align: center;
 `;

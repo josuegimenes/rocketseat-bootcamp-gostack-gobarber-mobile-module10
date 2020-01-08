@@ -27,7 +27,7 @@ export default function SelectDateTime({ navigation }) {
     }
 
     loadAvailable();
-  }, [date, provider.id]);
+  }, [date, provider, provider.id]);
 
   function handleSelectHour(time) {
     navigation.navigate('Confirm', {
